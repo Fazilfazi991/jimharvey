@@ -15,7 +15,7 @@ export function Footer() {
                                 src="/logo.png"
                                 alt="Jim Harvey Accounting"
                                 fill
-                                className="object-contain object-left brightness-0 invert"
+                                className="object-contain object-left"
                             />
                         </div>
                         <p className="text-muted-foreground text-sm leading-relaxed">

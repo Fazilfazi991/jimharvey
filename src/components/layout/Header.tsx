@@ -25,7 +25,7 @@ export function Header() {
               src="/logo.png"
               alt="Jim Harvey Accounting"
               fill
-              className="object-contain object-left brightness-0 invert"
+              className="object-contain object-left"
               priority
             />
           </div>
