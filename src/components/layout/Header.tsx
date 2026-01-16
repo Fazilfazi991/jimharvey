@@ -20,7 +20,7 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6 h-24 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="relative h-20 w-56 md:h-24 md:w-72">
+          <div className="relative h-28 w-80 md:h-32 md:w-96">
             <Image
               src="/logo.png"
               alt="Jim Harvey Accounting"
