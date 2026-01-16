@@ -19,8 +19,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-foreground/95 backdrop-blur supports-[backdrop-filter]:bg-foreground/90 shadow-lg">
       <div className="container mx-auto px-4 md:px-6 h-24 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 pt-6 pb-2">
-          <div className="relative h-36 w-72 md:h-44 md:w-[420px]">
+        <Link href="/" className="flex items-center gap-2">
+          <div className="relative h-16 w-48 md:h-20 md:w-64">
             <Image
               src="/logo.png"
               alt="Jim Harvey Accounting"
@@ -46,7 +46,7 @@ export function Header() {
 
         {/* Desktop CTA & Extras */}
         <div className="hidden lg:flex items-center gap-4">
-          <div className="flex items-center gap-2 text-sm font-medium text-white/90">
+          <div className="flex items-center gap-2 text-sm font-medium text-white/90 whitespace-nowrap">
             <Phone className="h-4 w-4 text-primary" />
             <span>+971 54 276 3828</span>
           </div>
