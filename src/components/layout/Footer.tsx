@@ -15,7 +15,7 @@ export function Footer() {
                                 src="/logo.png"
                                 alt="Jim Harvey Accounting"
                                 fill
-                                className="object-contain object-left"
+                                className="object-contain object-left brightness-0 invert"
                             />
                         </div>
                         <p className="text-muted-foreground text-sm leading-relaxed">
@@ -53,7 +53,7 @@ export function Footer() {
                         <h4 className="font-bold text-white">Contact</h4>
                         <ul className="space-y-2 text-sm text-gray-300">
                             <li>Dubai, UAE</li>
-                            <li>+971 ...</li>
+                            <li>+971 54 276 3828</li>
                             <li>contact@jimharvey.ae</li>
                         </ul>
                         <div className="pt-2">
