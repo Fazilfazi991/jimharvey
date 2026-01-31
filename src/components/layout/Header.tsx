@@ -7,12 +7,11 @@ import { Menu, Phone } from "lucide-react";
 export function Header() {
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Industries", href: "#industries" },
-    { name: "Why Us", href: "#why-us" },
-    { name: "Resources", href: "#resources" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Industries", href: "/#industries" },
+    { name: "Why Us", href: "/#why-us" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -20,7 +19,8 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6 h-24 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="relative h-28 w-80 md:h-32 md:w-96">
+          {/* Resized Logo Container */}
+          <div className="relative h-12 w-40 md:h-16 md:w-56">
             <Image
               src="/logo.png"
               alt="Jim Harvey Accounting"
@@ -31,21 +31,21 @@ export function Header() {
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-6">
+        {/* Desktop Navigation - Changed breakpoint to xl */}
+        <nav className="hidden xl:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-white hover:text-primary transition-colors hover:border-b-2 hover:border-primary py-1"
+              className="text-sm font-medium text-white hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary py-1"
             >
               {link.name}
             </Link>
           ))}
         </nav>
 
-        {/* Desktop CTA & Extras */}
-        <div className="hidden lg:flex items-center gap-4">
+        {/* Desktop CTA & Extras - Changed breakpoint to xl */}
+        <div className="hidden xl:flex items-center gap-4">
           <div className="flex items-center gap-2 text-sm font-medium text-white/90 whitespace-nowrap">
             <Phone className="h-4 w-4 text-primary" />
             <span>+971 54 276 3828</span>
@@ -53,8 +53,8 @@ export function Header() {
           <Button className="font-semibold">Get a Free Consultation</Button>
         </div>
 
-        {/* Mobile Menu */}
-        <div className="flex lg:hidden items-center gap-4">
+        {/* Mobile Menu - Changed breakpoint to xl */}
+        <div className="flex xl:hidden items-center gap-4">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
