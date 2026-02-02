@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Phone } from "lucide-react";
+import { Menu, Phone, ChevronDown } from "lucide-react";
+import { services } from "@/data/services";
 
 export function Header() {
   const navLinks = [
@@ -34,13 +35,56 @@ export function Header() {
         {/* Desktop Navigation - Changed breakpoint to xl */}
         <nav className="hidden xl:flex items-center gap-6">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-white hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary py-1"
-            >
-              {link.name}
-            </Link>
+            link.name === "Services" ? (
+              <div key={link.name} className="relative group">
+                <Link
+                  href={link.href}
+                  className="flex items-center gap-1 text-sm font-medium text-white hover:text-primary transition-colors py-4 group-hover:text-primary"
+                >
+                  {link.name}
+                  <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+                </Link>
+                {/* Dropdown Menu */}
+                <div className="absolute top-full -left-4 w-72 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
+                  <div className="bg-background/95 backdrop-blur-md border border-border rounded-xl shadow-xl p-2 flex flex-col gap-1 ring-1 ring-primary/5">
+                    {services.map((service) => (
+                      <Link
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
+                        className="flex items-start gap-3 p-3 rounded-lg hover:bg-muted/80 transition-colors group/item"
+                      >
+                        <div className="mt-1 h-8 w-8 rounded-md bg-primary/10 flex items-center justify-center shrink-0 group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                          <service.icon className="h-4 w-4 text-primary group-hover/item:text-white transition-colors" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-foreground group-hover/item:text-primary transition-colors">
+                            {service.title}
+                          </p>
+                          <p className="text-xs text-muted-foreground line-clamp-1">
+                            {service.shortDescription}
+                          </p>
+                        </div>
+                      </Link>
+                    ))}
+                    <div className="h-px bg-border my-1" />
+                    <Link
+                      href="/services"
+                      className="text-center text-sm font-medium text-primary p-2 hover:bg-primary/5 rounded-lg transition-colors"
+                    >
+                      View All Services
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-white hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary py-1"
+              >
+                {link.name}
+              </Link>
+            )
           ))}
         </nav>
 

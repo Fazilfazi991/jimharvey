@@ -31,7 +31,7 @@ export const services: Service[] = [
             "Make informed business decisions",
             "Ensure compliance with local regulations"
         ],
-        heroImage: "/images/bookkeeping-hero.jpg"
+        heroImage: "/images/services.png"
     },
     {
         slug: "financial-accounting-reporting",
@@ -52,7 +52,7 @@ export const services: Service[] = [
             "Identify cost-saving opportunities",
             "Strategic planning support"
         ],
-        heroImage: "/images/reporting-hero.jpg"
+        heroImage: "/images/hero.png"
     },
     {
         slug: "vat-compliance-filing",
@@ -73,7 +73,7 @@ export const services: Service[] = [
             "Timely submissions to the FTA",
             "Peace of mind regarding tax liabilities"
         ],
-        heroImage: "/images/vat-hero.jpg"
+        heroImage: "/images/why-us.png"
     },
     {
         slug: "corporate-tax-filing",
@@ -94,7 +94,7 @@ export const services: Service[] = [
             "Risk mitigation",
             "Strategic tax planning"
         ],
-        heroImage: "/images/corporate-tax-hero.jpg"
+        heroImage: "/images/services.png"
     },
     {
         slug: "outsourced-accounting",
@@ -115,7 +115,7 @@ export const services: Service[] = [
             "Continuity of service (no sick leave gaps)",
             "Focus on your core business growth"
         ],
-        heroImage: "/images/outsourced-hero.jpg"
+        heroImage: "/images/hero.png"
     },
     {
         slug: "cleanup-catchup-accounting",
@@ -136,6 +136,6 @@ export const services: Service[] = [
             "Clear outstanding tax liabilities",
             "Fresh start for your financial records"
         ],
-        heroImage: "/images/cleanup-hero.jpg"
+        heroImage: "/images/why-us.png"
     }
 ];
