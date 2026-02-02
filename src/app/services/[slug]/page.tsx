@@ -9,9 +9,9 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 
 interface ServicePageProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
 export function generateStaticParams() {
@@ -20,9 +20,10 @@ export function generateStaticParams() {
     }));
 }
 
-export default function ServicePage({ params }: ServicePageProps) {
-    const service = services.find(s => s.slug === params.slug);
-    const relatedServices = services.filter(s => s.slug !== params.slug).slice(0, 3);
+export default async function ServicePage({ params }: ServicePageProps) {
+    const { slug } = await params;
+    const service = services.find(s => s.slug === slug);
+    const relatedServices = services.filter(s => s.slug !== slug).slice(0, 3);
 
     if (!service) {
         notFound();
