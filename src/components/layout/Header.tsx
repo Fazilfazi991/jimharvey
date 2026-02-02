@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { Menu, Phone, ChevronDown } from "lucide-react";
 import { services } from "@/data/services";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 export function Header() {
   const navLinks = [
@@ -107,20 +108,50 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
-              <div className="flex flex-col gap-6 mt-6">
-                <Link href="/" className="text-lg font-bold">Jim Harvey</Link>
-                <nav className="flex flex-col gap-4">
+              <div className="flex flex-col gap-8 mt-8 h-full">
+                <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
+                <Link href="/" className="text-2xl font-bold tracking-tight">Jim Harvey</Link>
+                <nav className="flex flex-col gap-6">
                   {navLinks.map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.href}
-                      className="text-base font-medium text-foreground hover:text-primary transition-colors"
-                    >
-                      {link.name}
-                    </Link>
+                    link.name === "Services" ? (
+                      <Accordion key={link.name} type="single" collapsible className="w-full">
+                        <AccordionItem value="services" className="border-none">
+                          <AccordionTrigger className="py-0 text-lg font-medium text-foreground hover:text-primary hover:no-underline">
+                            {link.name}
+                          </AccordionTrigger>
+                          <AccordionContent className="pb-0 pt-4 flex flex-col gap-4 pl-4">
+                            {services.map((service) => (
+                              <Link
+                                key={service.slug}
+                                href={`/services/${service.slug}`}
+                                className="text-base text-muted-foreground hover:text-primary transition-colors block py-1"
+                              >
+                                {service.title}
+                              </Link>
+                            ))}
+                            <Link
+                              href="/services"
+                              className="text-base font-semibold text-primary block py-1 mt-2"
+                            >
+                              View All Services
+                            </Link>
+                          </AccordionContent>
+                        </AccordionItem>
+                      </Accordion>
+                    ) : (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        className="text-lg font-medium text-foreground hover:text-primary transition-colors block"
+                      >
+                        {link.name}
+                      </Link>
+                    )
                   ))}
                 </nav>
-                <Button className="w-full">Get a Free Consultation</Button>
+                <div className="mt-auto mb-8">
+                  <Button className="w-full text-lg py-6 shadow-md">Get a Free Consultation</Button>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
