@@ -22,7 +22,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           {/* Resized Logo Container */}
-          <div className="relative h-24 w-80 md:h-32 md:w-[28rem]">
+          <div className="relative h-36 w-[30rem] md:h-48 md:w-[42rem]">
             <Image
               src="/logo.png"
               alt="Jim Harvey Accounting"
@@ -102,8 +102,8 @@ export function Header() {
         <div className="flex xl:hidden items-center gap-4">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+              <Button variant="ghost" size="icon" className="text-white hover:text-primary hover:bg-white/10">
+                <Menu className="h-8 w-8" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
