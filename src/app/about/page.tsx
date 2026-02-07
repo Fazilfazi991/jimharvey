@@ -2,7 +2,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { AboutUs } from "@/components/home/AboutUs";
 import { WhyUs } from "@/components/home/WhyUs";
 import { TrustFactors } from "@/components/home/TrustFactors";
-import { TrustBar } from "@/components/home/TrustBar";
+
 import { LeadCapture } from "@/components/home/LeadCapture";
 
 export default function AboutPage() {
@@ -15,7 +15,7 @@ export default function AboutPage() {
             />
             <AboutUs />
             <WhyUs />
-            <TrustBar />
+
             <TrustFactors />
             <LeadCapture />
         </>
