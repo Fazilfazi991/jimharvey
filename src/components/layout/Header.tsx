@@ -22,7 +22,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           {/* Resized Logo Container */}
-          <div className="relative h-20 w-60 md:h-20 md:w-60">
+          <div className="relative h-14 w-48 md:h-16 md:w-56">
             <Image
               src="/logo.png"
               alt="Jim Harvey Accounting"
