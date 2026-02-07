@@ -22,7 +22,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           {/* Resized Logo Container */}
-          <div className="relative h-12 w-40 md:h-16 md:w-56">
+          <div className="relative h-24 w-80 md:h-32 md:w-[28rem]">
             <Image
               src="/logo.png"
               alt="Jim Harvey Accounting"
@@ -93,7 +93,7 @@ export function Header() {
         <div className="hidden xl:flex items-center gap-4">
           <div className="flex items-center gap-2 text-sm font-medium text-white/90 whitespace-nowrap">
             <Phone className="h-4 w-4 text-primary" />
-            <span>+971 54 276 3828</span>
+            <span>+971 50 804 3876</span>
           </div>
           <Button className="font-semibold">Get a Free Consultation</Button>
         </div>
@@ -110,28 +110,30 @@ export function Header() {
             <SheetContent side="right">
               <div className="flex flex-col gap-8 mt-8 h-full">
                 <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
-                <Link href="/" className="text-2xl font-bold tracking-tight">Jim Harvey</Link>
-                <nav className="flex flex-col gap-6">
+                <div className="px-4">
+                  <Link href="/" className="text-2xl font-bold tracking-tight">Jim Harvey</Link>
+                </div>
+                <nav className="flex flex-col gap-2">
                   {navLinks.map((link) => (
                     link.name === "Services" ? (
                       <Accordion key={link.name} type="single" collapsible className="w-full">
-                        <AccordionItem value="services" className="border-none">
-                          <AccordionTrigger className="py-0 text-lg font-medium text-foreground hover:text-primary hover:no-underline">
+                        <AccordionItem value="services" className="border-b-0">
+                          <AccordionTrigger className="py-3 text-lg font-medium text-foreground hover:text-primary hover:no-underline px-4 rounded-md hover:bg-muted/50 transition-colors">
                             {link.name}
                           </AccordionTrigger>
-                          <AccordionContent className="pb-0 pt-4 flex flex-col gap-4 pl-4">
+                          <AccordionContent className="pb-2 pt-2 flex flex-col gap-2 pl-8">
                             {services.map((service) => (
                               <Link
                                 key={service.slug}
                                 href={`/services/${service.slug}`}
-                                className="text-base text-muted-foreground hover:text-primary transition-colors block py-1"
+                                className="text-base text-muted-foreground hover:text-primary transition-colors block py-2 px-4 rounded-md hover:bg-muted/50"
                               >
                                 {service.title}
                               </Link>
                             ))}
                             <Link
                               href="/services"
-                              className="text-base font-semibold text-primary block py-1 mt-2"
+                              className="text-base font-semibold text-primary block py-2 px-4 rounded-md hover:bg-primary/5 mt-1"
                             >
                               View All Services
                             </Link>
@@ -142,7 +144,7 @@ export function Header() {
                       <Link
                         key={link.name}
                         href={link.href}
-                        className="text-lg font-medium text-foreground hover:text-primary transition-colors block"
+                        className="text-lg font-medium text-foreground hover:text-primary transition-colors block py-3 px-4 rounded-md hover:bg-muted/50"
                       >
                         {link.name}
                       </Link>

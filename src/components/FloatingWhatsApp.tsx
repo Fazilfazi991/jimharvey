@@ -3,7 +3,7 @@
 import { MessageCircle } from "lucide-react";
 
 export function FloatingWhatsApp() {
-    const phoneNumber = "971542763828"; // WhatsApp format without + or spaces
+    const phoneNumber = "971508043876"; // WhatsApp format without + or spaces
     const message = "Hello! I'm interested in your accounting services.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

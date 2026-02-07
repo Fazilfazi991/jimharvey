@@ -10,7 +10,7 @@ export function Footer() {
                     {/* Column 1 - Brand */}
                     {/* Brand Info */}
                     <div className="flex flex-col gap-4">
-                        <div className="relative h-36 w-96">
+                        <div className="relative h-72 w-[48rem]">
                             <Image
                                 src="/logo.png"
                                 alt="Jim Harvey Accounting"
@@ -53,9 +53,9 @@ export function Footer() {
                     <div className="space-y-4">
                         <h4 className="font-bold text-white">Contact</h4>
                         <ul className="space-y-2 text-sm text-gray-300">
-                            <li>Dubai, UAE</li>
-                            <li>+971 54 276 3828</li>
-                            <li>contact@jimharvey.ae</li>
+                            <li>Al Qusais 2, Dubai</li>
+                            <li>+971 50 804 3876</li>
+                            <li>info@jhaccounting.ae</li>
                         </ul>
                         <div className="pt-2">
                             <Link href="#" className="text-gray-300 hover:text-primary text-xs underline">Privacy Policy</Link>

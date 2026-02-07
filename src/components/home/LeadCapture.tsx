@@ -36,7 +36,7 @@ export function LeadCapture() {
                                 </div>
                                 <div>
                                     <p className="font-bold text-foreground">Phone / WhatsApp</p>
-                                    <p className="text-muted-foreground">+971 ...</p>
+                                    <p className="text-muted-foreground">+971 50 804 3876</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4">
@@ -45,7 +45,7 @@ export function LeadCapture() {
                                 </div>
                                 <div>
                                     <p className="font-bold text-foreground">Email</p>
-                                    <p className="text-muted-foreground">contact@jimharvey.ae</p>
+                                    <p className="text-muted-foreground">info@jhaccounting.ae</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4">
@@ -54,7 +54,7 @@ export function LeadCapture() {
                                 </div>
                                 <div>
                                     <p className="font-bold text-foreground">Office Location</p>
-                                    <p className="text-muted-foreground">Dubai, UAE</p>
+                                    <p className="text-muted-foreground">Al Qusais 2, Dubai</p>
                                 </div>
                             </div>
                         </div>

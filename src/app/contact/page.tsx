@@ -21,7 +21,7 @@ export default function ContactPage() {
                                     <Phone className="h-6 w-6 text-primary" />
                                 </div>
                                 <h3 className="text-xl font-bold mb-2">Call Us</h3>
-                                <p className="text-muted-foreground">+971 54 276 3828</p>
+                                <p className="text-muted-foreground">+971 50 804 3876</p>
                             </CardContent>
                         </Card>
 
@@ -31,7 +31,7 @@ export default function ContactPage() {
                                     <Mail className="h-6 w-6 text-primary" />
                                 </div>
                                 <h3 className="text-xl font-bold mb-2">Email Us</h3>
-                                <p className="text-muted-foreground">contact@jimharvey.ae</p>
+                                <p className="text-muted-foreground">info@jhaccounting.ae</p>
                             </CardContent>
                         </Card>
 
@@ -41,7 +41,7 @@ export default function ContactPage() {
                                     <MapPin className="h-6 w-6 text-primary" />
                                 </div>
                                 <h3 className="text-xl font-bold mb-2">Visit Us</h3>
-                                <p className="text-muted-foreground">Dubai, UAE</p>
+                                <p className="text-muted-foreground">Al Qusais 2, Dubai</p>
                             </CardContent>
                         </Card>
                     </div>
