@@ -40,12 +40,10 @@ export function Footer() {
                     <div className="space-y-4">
                         <h4 className="font-bold text-white">Services</h4>
                         <ul className="space-y-2 text-sm text-gray-300">
-                            <li><Link href="/services/monthly-quarterly-bookkeeping" className="hover:text-primary transition-colors">Bookkeeping</Link></li>
-                            <li><Link href="/services/financial-accounting-reporting" className="hover:text-primary transition-colors">Accounting & Reporting</Link></li>
-                            <li><Link href="/services/vat-compliance-filing" className="hover:text-primary transition-colors">VAT Compliance</Link></li>
-                            <li><Link href="/services/corporate-tax-filing" className="hover:text-primary transition-colors">Corporate Tax</Link></li>
-                            <li><Link href="/services/outsourced-accounting" className="hover:text-primary transition-colors">Outsourced Accounting</Link></li>
-                            <li><Link href="/services/cleanup-catchup-accounting" className="hover:text-primary transition-colors">Cleanup & Catch-up</Link></li>
+                            <li><Link href="/services/accounting-bookkeeping" className="hover:text-primary transition-colors">Accounting & Bookkeeping</Link></li>
+                            <li><Link href="/services/auditing-services" className="hover:text-primary transition-colors">Auditing Services</Link></li>
+                            <li><Link href="/services/vat-services" className="hover:text-primary transition-colors">VAT Services</Link></li>
+                            <li><Link href="/services/corporate-services" className="hover:text-primary transition-colors">Corporate Services</Link></li>
                         </ul>
                     </div>
 
