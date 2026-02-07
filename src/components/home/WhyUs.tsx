@@ -8,7 +8,7 @@ export function WhyUs() {
     const reasons = [
         {
             title: "Local UAE Compliance Expertise",
-            description: "Deep understanding of UAE corporate, VAT, and reporting requirements to keep your business fully compliant.",
+            description: "Deep understanding of UAE Corporate Tax, VAT, and reporting requirements to keep your business fully compliant.",
             icon: ShieldCheck,
         },
         {

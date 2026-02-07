@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export function Hero() {
@@ -51,11 +52,15 @@ export function Hero() {
                             transition={{ delay: 0.5, duration: 0.4 }}
                             className="flex flex-col sm:flex-row gap-4 mt-4"
                         >
-                            <Button size="lg" className="text-base font-semibold px-8">
-                                Book a Free Consultation
+                            <Button asChild size="lg" className="text-base font-semibold px-8">
+                                <Link href="/contact">
+                                    Book a Free Consultation
+                                </Link>
                             </Button>
-                            <Button size="lg" variant="outline" className="text-base font-semibold text-primary border-primary hover:bg-primary/10">
-                                View Our Services
+                            <Button asChild size="lg" variant="outline" className="text-base font-semibold text-primary border-primary hover:bg-primary/10">
+                                <Link href="/services">
+                                    View Our Services
+                                </Link>
                             </Button>
                         </motion.div>
 

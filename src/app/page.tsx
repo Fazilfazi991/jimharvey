@@ -4,7 +4,6 @@ import { AboutUs } from "@/components/home/AboutUs";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { WhyUs } from "@/components/home/WhyUs";
 import { TrustFactors } from "@/components/home/TrustFactors";
-import { Testimonials } from "@/components/home/Testimonials";
 import { Process } from "@/components/home/Process";
 import { Industries } from "@/components/home/Industries";
 import { FAQ } from "@/components/home/FAQ";
@@ -19,7 +18,6 @@ export default function Home() {
       <ServicesOverview />
       <WhyUs />
       <TrustFactors />
-      <Testimonials />
       <Process />
       <Industries />
       <FAQ />

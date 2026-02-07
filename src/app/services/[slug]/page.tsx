@@ -4,7 +4,6 @@ import { LeadCapture } from "@/components/home/LeadCapture";
 import { notFound } from "next/navigation";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { ToolsTechnology } from "@/components/services/ToolsTechnology";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 
@@ -99,7 +98,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
                 </div>
             </section>
 
-            <ToolsTechnology />
+
 
             {/* Related Services */}
             <section className="py-20 bg-background">
