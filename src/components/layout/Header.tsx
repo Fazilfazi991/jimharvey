@@ -107,35 +107,46 @@ export function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
-              <div className="flex flex-col gap-8 mt-8 h-full">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] border-l-2 border-primary/20">
+              <div className="flex flex-col h-full">
                 <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
-                <div className="px-4">
-                  <Link href="/" className="text-2xl font-bold tracking-tight">Jim Harvey</Link>
+
+                {/* Mobile Menu Logo */}
+                <div className="py-6 border-b border-border/50 mb-6">
+                  <div className="relative h-16 w-48">
+                    <Image
+                      src="/logo.png"
+                      alt="Jim Harvey Accounting"
+                      fill
+                      className="object-contain object-left"
+                      priority
+                    />
+                  </div>
                 </div>
-                <nav className="flex flex-col gap-2">
+
+                <nav className="flex flex-col gap-1 overflow-y-auto flex-1 pr-2">
                   {navLinks.map((link) => (
                     link.name === "Services" ? (
                       <Accordion key={link.name} type="single" collapsible className="w-full">
                         <AccordionItem value="services" className="border-b-0">
-                          <AccordionTrigger className="py-3 text-lg font-medium text-foreground hover:text-primary hover:no-underline px-4 rounded-md hover:bg-muted/50 transition-colors">
+                          <AccordionTrigger className="py-3 text-lg font-medium text-foreground hover:text-primary hover:bg-primary/5 px-4 rounded-lg transition-all">
                             {link.name}
                           </AccordionTrigger>
-                          <AccordionContent className="pb-2 pt-2 flex flex-col gap-2 pl-8">
+                          <AccordionContent className="pb-2 pt-1 flex flex-col gap-1 pl-4">
                             {services.map((service) => (
                               <Link
                                 key={service.slug}
                                 href={`/services/${service.slug}`}
-                                className="text-base text-muted-foreground hover:text-primary transition-colors block py-2 px-4 rounded-md hover:bg-muted/50"
+                                className="text-sm text-muted-foreground hover:text-primary transition-colors block py-2 px-4 rounded-md hover:bg-muted/50 border-l-2 border-transparent hover:border-primary ml-2"
                               >
                                 {service.title}
                               </Link>
                             ))}
                             <Link
                               href="/services"
-                              className="text-base font-semibold text-primary block py-2 px-4 rounded-md hover:bg-primary/5 mt-1"
+                              className="text-sm font-semibold text-primary block py-2 px-4 rounded-md hover:bg-primary/5 mt-2 ml-2"
                             >
-                              View All Services
+                              View All Services →
                             </Link>
                           </AccordionContent>
                         </AccordionItem>
@@ -144,15 +155,23 @@ export function Header() {
                       <Link
                         key={link.name}
                         href={link.href}
-                        className="text-lg font-medium text-foreground hover:text-primary transition-colors block py-3 px-4 rounded-md hover:bg-muted/50"
+                        className="text-lg font-medium text-foreground hover:text-primary transition-all block py-3 px-4 rounded-lg hover:bg-primary/5"
                       >
                         {link.name}
                       </Link>
                     )
                   ))}
                 </nav>
-                <div className="mt-auto mb-8">
-                  <Button className="w-full text-lg py-6 shadow-md">Get a Free Consultation</Button>
+
+                <div className="mt-auto pt-6 border-t border-border/50">
+                  <div className="flex flex-col gap-4">
+                    <p className="text-sm text-muted-foreground text-center">
+                      Need expert advice?
+                    </p>
+                    <Button className="w-full text-base py-6 shadow-lg shadow-primary/20">
+                      Get a Free Consultation
+                    </Button>
+                  </div>
                 </div>
               </div>
             </SheetContent>
