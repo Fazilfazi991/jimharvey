@@ -10,7 +10,7 @@ export function Footer() {
                     {/* Column 1 - Brand */}
                     {/* Brand Info */}
                     <div className="flex flex-col gap-4">
-                        <div className="relative h-72 w-[48rem]">
+                        <div className="relative h-[13.5rem] w-[36rem]">
                             <Image
                                 src="/logo.png"
                                 alt="Jim Harvey Accounting"
