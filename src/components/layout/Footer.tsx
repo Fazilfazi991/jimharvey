@@ -56,9 +56,9 @@ export function Footer() {
                             <li>info@jhaccounting.ae</li>
                         </ul>
                         <div className="pt-2">
-                            <Link href="#" className="text-gray-300 hover:text-primary text-xs underline">Privacy Policy</Link>
+                            <Link href="/privacy-policy" className="text-gray-300 hover:text-primary text-xs underline">Privacy Policy</Link>
                             <span className="mx-2 text-gray-500">|</span>
-                            <Link href="#" className="text-gray-300 hover:text-primary text-xs underline">Terms & Conditions</Link>
+                            <Link href="/terms-conditions" className="text-gray-300 hover:text-primary text-xs underline">Terms & Conditions</Link>
                         </div>
                     </div>
                 </div>
