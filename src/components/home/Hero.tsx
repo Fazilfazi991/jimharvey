@@ -20,9 +20,17 @@ export function Hero() {
                         transition={{ duration: 0.6 }}
                         className="flex flex-col gap-6"
                     >
-                        <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-foreground">
-                            Reliable Accounting & Bookkeeping Services in the UAE
+                        <h1 className="flex flex-col gap-1 mb-2">
+                            <span className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-primary tracking-tight">
+                                Jim Harvey
+                            </span>
+                            <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary/90 tracking-tight">
+                                Accounting & Bookkeeping
+                            </span>
                         </h1>
+                        <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-foreground">
+                            Reliable Accounting & Bookkeeping Services in the UAE
+                        </h2>
                         <p className="text-lg text-muted-foreground/80 md:text-xl">
                             Helping businesses stay compliant, cash‑flow positive, and always audit‑ready with clear, accurate numbers.
                         </p>
