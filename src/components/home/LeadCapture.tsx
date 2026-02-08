@@ -197,9 +197,5 @@ function LeadForm() {
                 {status === "loading" ? "Sending..." : "Request Consultation"}
             </Button>
         </form>
-                    </motion.div >
-                </div >
-            </div >
-        </section >
     );
 }
