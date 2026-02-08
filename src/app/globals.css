@@ -49,7 +49,7 @@
 
 :root {
   --radius: 0.5rem;
-  
+
   /* PRD: Background light: #FFFFFF */
   --background: #FFFFFF;
   /* PRD: Primary dark (text): #102A3A */
@@ -87,7 +87,7 @@
   /* PRD: Divider / border gray: #D4D9E2 */
   --border: #D4D9E2;
   --input: #D4D9E2;
-  
+
   /* Ring matches primary */
   --ring: #3DC4C4;
 
@@ -112,10 +112,12 @@
      but assuming primary brand stays same or slightly adapted.
      PRD doesn't explicitly define dark mode palette, so inferring.
   */
-  --background: #102A3A; /* Using primary dark as background */
+  --background: #102A3A;
+  /* Using primary dark as background */
   --foreground: #FFFFFF;
 
-  --card: #16364A; /* Slightly lighter than bg */
+  --card: #16364A;
+  /* Slightly lighter than bg */
   --card-foreground: #FFFFFF;
 
   --popover: #16364A;
@@ -160,7 +162,9 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
 }
